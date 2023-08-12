@@ -30,12 +30,13 @@ final class IngredientCell: UICollectionViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Public methods
-    func configure(with ingridient: drinkIngredient?) {
+    func configure(with ingridient: DrinkIngredient?) {
         ingredientNameLabel.text = ingridient?.name ?? ""
         ingredientMeasureLabel.text = ingridient?.measure ?? ""
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         fetchImage(from: ingridient?.imageUrl ?? "")
+        setupCustomCell()
     }
     
     // MARK: - Private methods

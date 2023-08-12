@@ -30,6 +30,7 @@ final class CocktailCell: UICollectionViewCell {
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         fetchImage(from: drink?.strDrinkThumb ?? "")
+        setupCustomCell()
     }
     
     // MARK: - Private methods

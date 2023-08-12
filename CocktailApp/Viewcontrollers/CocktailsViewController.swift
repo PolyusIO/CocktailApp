@@ -77,17 +77,8 @@ extension CocktailsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cocktail", for: indexPath) as? CocktailCell else { return UICollectionViewCell() }
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CocktailCell else { return UICollectionViewCell() }
         cell.configure(with: drinksByIngredient?.drinks[indexPath.item])
-        cell.layer.cornerRadius = 5.0
-        cell.layer.borderWidth = 0.0
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 5, height: 8)
-        cell.layer.shadowRadius = 9.0
-        cell.layer.shadowOpacity = 0.3
-        cell.layer.masksToBounds = false
-        
         return cell
     }
 }

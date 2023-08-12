@@ -18,7 +18,7 @@
 		8B402C142A868C5700FA17ED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B402C132A868C5700FA17ED /* NetworkManager.swift */; };
 		8B402C172A868CE800FA17ED /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B402C162A868CE800FA17ED /* IngredientCell.swift */; };
 		8B402C192A868D1400FA17ED /* CocktailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B402C182A868D1400FA17ED /* CocktailCell.swift */; };
-		8B402C1B2A86BF8500FA17ED /* CustomShadowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B402C1A2A86BF8500FA17ED /* CustomShadowCell.swift */; };
+		8B402C1E2A8759F100FA17ED /* ExtensionUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B402C1D2A8759F100FA17ED /* ExtensionUICollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		8B402C132A868C5700FA17ED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8B402C162A868CE800FA17ED /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		8B402C182A868D1400FA17ED /* CocktailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailCell.swift; sourceTree = "<group>"; };
-		8B402C1A2A86BF8500FA17ED /* CustomShadowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShadowCell.swift; sourceTree = "<group>"; };
+		8B402C1D2A8759F100FA17ED /* ExtensionUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,7 @@
 				8B402C0C2A868B4B00FA17ED /* Models */,
 				8B402C0D2A868B6C00FA17ED /* Viewcontrollers */,
 				8B402C152A868CDE00FA17ED /* Views */,
+				8B402C1C2A8759B600FA17ED /* Extensions */,
 				8B402C122A868C4C00FA17ED /* Services */,
 				8B402C072A868A9600FA17ED /* App */,
 				8B402C092A868B0800FA17ED /* Resources */,
@@ -134,11 +135,18 @@
 		8B402C152A868CDE00FA17ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8B402C1A2A86BF8500FA17ED /* CustomShadowCell.swift */,
 				8B402C162A868CE800FA17ED /* IngredientCell.swift */,
 				8B402C182A868D1400FA17ED /* CocktailCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8B402C1C2A8759B600FA17ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8B402C1D2A8759F100FA17ED /* ExtensionUICollectionViewCell.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,8 +224,8 @@
 				8B402C142A868C5700FA17ED /* NetworkManager.swift in Sources */,
 				8B402C172A868CE800FA17ED /* IngredientCell.swift in Sources */,
 				8B402C0B2A868B3E00FA17ED /* Model.swift in Sources */,
+				8B402C1E2A8759F100FA17ED /* ExtensionUICollectionViewCell.swift in Sources */,
 				8B402BF42A868A3900FA17ED /* AppDelegate.swift in Sources */,
-				8B402C1B2A86BF8500FA17ED /* CustomShadowCell.swift in Sources */,
 				8B402C192A868D1400FA17ED /* CocktailCell.swift in Sources */,
 				8B402BF62A868A3900FA17ED /* SceneDelegate.swift in Sources */,
 				8B402C0F2A868B8600FA17ED /* DetailedViewController.swift in Sources */,

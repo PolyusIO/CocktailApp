@@ -29,9 +29,9 @@ final class DetailedViewController: UIViewController {
     
     // MARK: - Private properties
     private let reuseIdentifier = "cell"
-    private let width = (UIScreen.main.bounds.width - 16 - 16 - 10 - 10) / 3
+    private let width = (UIScreen.main.bounds.width - 52) / 3 // Constraints 16 + 16 + 10 + 10 = 52
     private var drink: Drink?
-    private var ingredient: [drinkIngredient] = []
+    private var ingredient: [DrinkIngredient] = []
     
     // MARK: - Public propertie
     public var idDrink: String?
@@ -87,16 +87,7 @@ extension DetailedViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? IngredientCell else { return UICollectionViewCell() }
-        
         cell.configure(with: ingredient[indexPath.row])
-        cell.layer.cornerRadius = 5.0
-        cell.layer.borderWidth = 0.0
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 5, height: 8)
-        cell.layer.shadowRadius = 9.0
-        cell.layer.shadowOpacity = 0.3
-        cell.layer.masksToBounds = false
-        
         return cell
     }
 }

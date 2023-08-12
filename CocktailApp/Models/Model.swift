@@ -73,37 +73,35 @@ struct Drink: Decodable {
         strDrinkThumb ?? ""
     }
     
-    var ingredients: [drinkIngredient] {
+    var ingredients: [DrinkIngredient] {
+        let strIngredient = [
+            strIngredient1, strIngredient2, strIngredient3,
+            strIngredient4, strIngredient5, strIngredient6,
+            strIngredient7, strIngredient8, strIngredient9,
+            strIngredient10, strIngredient11, strIngredient12,
+            strIngredient13, strIngredient14, strIngredient15
+        ]
+        let strMeasure = [
+            strMeasure1, strMeasure2, strMeasure3,
+            strMeasure4, strMeasure5, strMeasure6,
+            strMeasure7, strMeasure8, strMeasure9,
+            strMeasure10, strMeasure11, strMeasure12,
+            strMeasure13, strMeasure14, strMeasure15
+        ]
+        var result: [DrinkIngredient] = []
         
-        var result: [drinkIngredient] = []
-        
-        func addIngredient(name: String?, measure: String?) {
-            if let name = name, let measure = measure, name != "", measure != "" {
-                result.append(drinkIngredient(name: name, measure: measure))
+        for (name, measure) in zip(strIngredient, strMeasure) {
+            if let name = name, let measure = measure, !name.isEmpty, !measure.isEmpty {
+                result.append(DrinkIngredient(name: name, measure: measure))
+            } else {
+                return result
             }
         }
-        
-        addIngredient(name: strIngredient1, measure: strMeasure1)
-        addIngredient(name: strIngredient2, measure: strMeasure2)
-        addIngredient(name: strIngredient3, measure: strMeasure3)
-        addIngredient(name: strIngredient4, measure: strMeasure4)
-        addIngredient(name: strIngredient5, measure: strMeasure5)
-        addIngredient(name: strIngredient6, measure: strMeasure6)
-        addIngredient(name: strIngredient7, measure: strMeasure7)
-        addIngredient(name: strIngredient8, measure: strMeasure8)
-        addIngredient(name: strIngredient9, measure: strMeasure9)
-        addIngredient(name: strIngredient10, measure: strMeasure10)
-        addIngredient(name: strIngredient11, measure: strMeasure11)
-        addIngredient(name: strIngredient12, measure: strMeasure12)
-        addIngredient(name: strIngredient13, measure: strMeasure13)
-        addIngredient(name: strIngredient14, measure: strMeasure14)
-        addIngredient(name: strIngredient15, measure: strMeasure15)
-        
         return result
     }
 }
 
-struct drinkIngredient {
+struct DrinkIngredient {
     let name: String
     let measure: String
     var imageUrl: String {
